@@ -1,0 +1,604 @@
+body {
+    box-sizing: border-box;
+font-family: "Work Sans", sans-serif;
+    text-transform: capitalize;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas:
+    "logo logo nav nav nav"
+    "sec sec sec sec sec"
+    "sec2 sec2 sec2 sec2 sec2"
+    "ser ser ser ser ser"
+    "pro pro pro pro pro"
+    "abo abo abo abo abo"
+    "cont cont cont cont cont"
+    "foot foot foot foot foot";
+}
+
+
+.logo {
+    grid-area: logo;
+    width: 60px;
+    padding: 10px 0 10px 100px;
+}
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 100px;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.links span {
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: .4s;
+}
+
+.links span:first-child,
+.links span:last-child
+{
+    width: 30px;
+}
+
+.links span:nth-child(2) {
+    width: 20px;
+}
+
+.nav:hover .links span {
+    width: 30px;
+}
+
+.nav ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 150px;
+    background-color: #f6f6f6;
+    padding: 10px 0;
+    margin: 0;
+    transition: .4s;
+    list-style: none;
+    z-index: 1000;
+}
+
+.nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: .4s;
+    padding: 10px 10px;
+}
+
+.nav:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav ul li {
+    transition: .4s;
+}
+
+.nav ul li:hover {
+    padding-left: 10px;
+}
+
+.section1 {
+    grid-area: sec;
+    position: relative;
+}
+
+.section1 img {
+    width: 100%;
+}
+
+.section1 .text {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+    text-align: center;
+}
+
+.text h1 {
+    color: #10cab7;
+    font-size: 50px;
+}
+
+.text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.section2 {
+    grid-area: sec2;
+    padding: 80px 20px;
+    background-color: #eee;
+}
+
+.section2 .icons1 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.section2 .cont {
+    width: 300px;
+    text-align: center;
+}
+
+.cont .idea {
+    font-weight: bold;
+    font-size: large;
+    opacity: 1;
+}
+
+.cont .lorem {
+    line-height: 1.6;
+    opacity: .6;
+}
+
+.section2 .cont i {
+    color: #10cab7;
+    font-size: 45px;
+    position: relative;
+    top: 10px;
+}
+
+
+.srvices {
+    grid-area: ser;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.srvices .serv h1 {
+    font-size: 80px;
+    opacity: .1;
+}
+
+.serv p {
+    position: relative;
+    bottom: 80px;
+    opacity: .6;
+}
+
+.srvices .icons2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.icons2 .child {
+    width: 35%;
+}
+
+.content {
+    display: flex;
+
+}
+
+.child .paragraph {
+    width: 300px;
+}
+
+.child .title {
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    right: 50px;
+}
+
+.icons2 i {
+    color: #10cab7;
+    font-size: 45px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 190px;
+    top: 50px;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 250px;
+    position: relative;
+    padding-right: 50px;
+}
+
+.img img {
+    width: 100%;
+}
+
+.img::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 120%;
+    background-color: #2c4755;
+    right: 20px;
+    top: -20px;
+    z-index: -1;
+}
+
+
+.protofile {
+    grid-area: pro;
+    background-color: #eee;
+    padding: 80px 20px;
+    margin-top: 100px;
+}
+
+.protofile .prot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prot h1 {
+    position: absolute;
+    font-size: 80px;
+    opacity: .1;
+}
+
+.prot p {
+
+    position: relative;
+    top: 30px;
+  opacity: .6;
+}
+
+.protofile .imgs {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.protofile .project {
+    width: 450px;
+    background: white;
+}
+
+.project .pla {
+    padding: 15px;
+}
+
+.pla .here {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pla .creative {
+    opacity: .6;
+    line-height: 1.7;
+}
+
+.project img {
+    width: 100%;
+}
+
+
+.about {
+    grid-area: abo;
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.about  .less {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.less h1 {
+    position: absolute;
+    font-size: 80px;
+    opacity: .1;
+}
+
+.less p {
+    position: relative;
+    top: 30px;
+    opacity: .6;
+}
+
+.topic {
+    display: flex;
+    padding-left: 50px;
+}
+
+.topic .lorem {
+ 
+    line-height: 1.6;
+    margin-top: 50px;
+padding-left: 200px;
+}
+
+.topic .lorem .bold {
+    font-weight: bold;
+}
+
+.topic .lorem p{
+    width: 800px;
+}
+
+hr {
+    border-top: transparent;
+    border: 1px solid #10cab7;
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 300px;
+}
+
+.topic .lorem .opacity {
+    opacity: .6;
+}
+
+
+.contact {
+    grid-area: cont;
+    background-color: #eee;
+    padding: 80px 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont h1 {
+    position: absolute;
+    font-size: 80px;
+    opacity: .1;
+}
+
+.cont p {
+    position: relative;
+    top: 30px;
+    opacity: .6;
+}
+
+.contact .pla {
+    margin-top: 50px;
+}
+
+.pla .mail{
+color: #10cab7;
+}
+
+.find {
+    word-spacing: 2px;
+}
+
+footer {
+    grid-area: foot;
+    background-color: #2c4755;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer span {
+    color: #10cab7;
+}
+
+@media (max-width:766px) {
+
+  
+    .nav {
+        padding-right: 20px;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .section2 .icons1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .srvices {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .srvices .serv h1 {
+        font-size: 50px;
+    }
+
+    .serv p {
+        bottom: 40px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons2 .child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icons2 i {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .child .title {
+        position: static;
+    }
+
+    .parent {
+        display: none;
+    }
+
+    .protofile .project {
+        width: 100%;
+    }
+
+    .about {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .topic {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .topic .img {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .topic .lorem {
+        width: 330px;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .topic .lorem p {
+        width: 100%;
+    }
+
+    hr {
+        position: static;
+        margin: 20px auto;
+    }
+
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .contact .cont h1 {
+        font-size: 50px;
+    }
+
+    .contact .pla h1 {
+        font-size: 18px;
+    }
+
+    .pla .mail {
+        font-size: 20px;
+    }
+
+    .find {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (min-width:767px) and (max-width:991px) {
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .nav {
+        padding-right: 20px;
+    }
+
+    .section1 {
+        width: 100%;
+    }
+
+    .section2 {
+        width: 100%;
+    }
+
+    .section1 img {
+        width: 100%;
+    }
+
+    .section2 .icons1 {
+        width: calc(50%-10px);
+        justify-content: flex-start;
+    }
+
+    .srvices .img {
+        display: none;
+    }
+
+    .srvices {
+        width: 100%;
+    }
+
+    .child {
+        padding-left: 68px;
+        padding-right: 20px;
+    }
+
+    .protofile {
+       width: 100%;
+    }
+
+    .protofile .project {
+        width: 360px;
+    }
+
+    .protofile .imgs {
+        justify-content: flex-start;
+    }
+
+    .about {
+      width: 100%;
+    }
+
+    .about .topic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-right: 80px;
+        margin-top: 50px;
+    }
+
+    hr {
+        position: static;
+        margin: 20px 150px;
+    }
+
+}
