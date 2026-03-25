@@ -6,7 +6,6 @@ font-family: "Work Sans", sans-serif;
 
 .main {
     width: 100%;
-    max-width:1200px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -429,6 +428,18 @@ footer span {
         font-size: 14px;
     }
 
+    .section1 {
+        width: 100%;
+    }
+
+    .section1 img {
+        width: 100%;
+    }
+
+    .section1 .text h1 {
+        font-size: 40px;
+    }
+
     .section2 .icons1 {
         flex-direction: column;
         align-items: center;
@@ -600,6 +611,175 @@ footer span {
     hr {
         position: static;
         margin: 20px 150px;
+    }
+
+}
+
+@media (min-width:1600px) and (max-width:2560px) {
+
+    .logo {
+        padding-left: 50px;
+        width: 120px;
+    }
+
+    .nav {
+        padding-right: 100px;
+    }
+
+    .links span {
+        height: 3px;
+    }
+    
+.links span:first-child,
+.links span:last-child
+{
+    width: 50px;
+}
+
+.links span:nth-child(2) {
+    width: 40px;
+}
+
+.nav:hover .links span {
+    width: 50px;
+}
+
+.nav ul {
+    top: 100px;
+    right: 90px;
+    width: 220px;
+}
+
+.nav ul li {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+
+    .section1 img {
+        width: 100%;
+    }
+
+    .section1 .text h1 {
+        font-size: 90px;
+    }
+
+    .section1 .text p {
+        font-size: 30px;
+    }
+
+    .section2 .cont i {
+        font-size: 70px;
+    } 
+
+    .section2 .cont {
+        width: 400px;
+    }
+
+    .cont .idea {
+        font-size: 30px;
+    }
+
+    .cont .lorem {
+        font-size: 25px;
+    }
+
+    .srvices .serv h1 {
+        font-size: 120px;
+    }
+
+    .serv p {
+        bottom: 115px;
+        font-size: 25px;
+    }
+
+    .icons2 i {
+        font-size: 65px;
+        right: 300px;
+    }
+
+    .child .title {
+        font-size: 30px;
+        right: 100px;
+    }
+
+    .child .paragraph {
+        width: 500px;
+        font-size: 25px;
+    }
+
+    .img {
+        width: 400px;
+        padding-right: 65px;
+    }
+
+    .prot h1 {
+        font-size: 120px;
+    }
+
+    .prot p {
+        top: 45px;
+        font-size: 25px;
+    }
+
+    .protofile .project {
+        width: 600px;
+    }
+
+    .protofile .imgs {
+        margin-top: 80px;
+        gap: 35px;
+    }
+
+    .pla .here {
+        font-size: 40px;
+    }
+
+    .pla .creative {
+        font-size: 30px;
+    }
+
+    .less h1 {
+        font-size: 120px;
+    }
+
+    .less p {
+        font-size: 25px;
+        top: 45px;
+    }
+
+    .topic {
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .topic .lorem {
+        font-size: 25px;
+    }
+
+    .cont h1 {
+        font-size: 120px;
+    }
+
+    .cont p {
+        font-size: 25px;
+        top: 45px;
+    }
+
+    .contact .pla {
+        margin-top: 70px;
+    }
+
+    .contact .pla h1 {
+        font-size: 50px;
+    }
+
+    .contact .find {
+        font-size: 25px;
+    }
+
+    footer {
+        font-size: 25px;
     }
 
 }
